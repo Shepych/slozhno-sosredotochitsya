@@ -2,3 +2,13 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  /* Переменные тёмной темы */
+  --main-color: #000028;
+  --additional-color: #FF0070;
+  --focus-color: #DB00FF;
+  --main-text-color: #F1B2CE;
+  --additional-text-color: #FF0070;
+  --header-background-image: url('/images/cover-image.png')
+} 

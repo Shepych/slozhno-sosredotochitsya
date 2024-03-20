@@ -1,5 +1,289 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+@import url(../fonts/fonts.css);
+
+* {
+  font-family: 'IBM Plex Mono';
+  box-sizing: border-box;
+}
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1024px;
+  background-color: var(--main-color);
+}
+
+.header__no-focus {
+  font-family: 'IBM Plex Mono';
+  position: absolute;
+  left: 0;
+  margin: 0;
+  top: calc(50% - 91px);
+  font-size: 157px;
+  text-shadow: 2px 2px 0px #FF0070;
+  color: var(--focus-color);
+}
+
+.header {
+  position: relative;
+  height: 1024px;
+  max-height: 768px;
+  background-size:cover;
+  background-position: 50% 50%;
+  background-image: var(--header-background-image);
+  margin-bottom: 60px;
+}
+
+.header__theme-menu {
+  padding-top: 20px;
+}
+
+.header__theme-menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__theme-menu-button {
+  color: var(--additional-text-color);
+  font-size: 18px;
+  padding: 0px 13px 0px 13px;
+  background: none;
+  border: 1px transparent;
+  height: 26px;
+  width: 70px;
+}
+
+.header__theme-menu-button:disabled  {
+  border: 1px solid var(--additional-text-color);;
+}
+
+.header__slogan {
+  color: #000028;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: var(--additional-color);
+  max-width: 364px;
+  display: flex;
+  flex-direction: column;
+  line-height: 23.4px;
+  position: absolute;
+  bottom: 134px;
+  right: 20px;
+}
+
+.rec {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rec__text {
+  font-family: 'IBM Plex mono';
+  text-transform: uppercase;
+  color: var(--additional-text-color);;
+}
+
+.rec__icon {
+  position: relative;
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background-color: var(--additional-text-color);
+  /* box-shadow: 0 0 10px var(--additional-text-color); */
+  box-shadow: 0 0 6px 3px var(--additional-text-color);
+  margin-left: 10px;
+}
+
+.rec__icon::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  /* background-color: green; */
+  /* box-shadow: 10px 10px 1px green; */
+}
+
+.rec__icon::after {
+  content: '';
+  position: absolute;
+  border-top: 1px solid var(--additional-text-color);
+  border-right: 1px solid var(--additional-text-color);
+  width: 25px;
+  height: 25px;
+  left: calc(-50% - 4px);
+  top: calc(-50% - 4px);
+}
+
+.corner__bottom-left {
+  background: none;
+  box-shadow: none;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+
+.corner__bottom-left::after {
+  border-bottom: 1px solid var(--additional-text-color);
+  border-left: 1px solid var(--additional-text-color);
+  border-top: none;
+  border-right: none;
+  
+}
+
+.info__columns {
+  gap: 20px;
+  color: var(--main-text-color);
+  display: grid;
+  grid-template-columns: 1fr 649px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 80px;
+}
+
+.info__columns:nth-child(2n) {
+  grid-template-areas: 
+  'info__columns-header info__columns-header info__columns-header'
+  'info__columns-item info__columns-item info__columns-item';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.info__columns:nth-child(2n) .info__columns-item {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.info__columns:nth-child(2n) .info__columns-item:nth-child(2) {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.info__columns:nth-child(2n) .info__columns-item:nth-child(3) {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.info__columns-header {
+  font-size: 18px;
+  margin: 0;
+  color: var(--additional-text-color);
+}
+
+.info__columns-header-last-grid {
+  grid-row: 1;
+  grid-row-end: 6;
+}
+
+.info__columns-item {
+  grid-column: 2;
+}
+
+.info__columns-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  background-color: var(--additional-color);
+  color: var(--main-color);
+}
+
+.info__columns-item p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+  "sunset sunset ice";
+  grid-template-rows: 260px 315px 428px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery__image {
+  background-position: 50% 50%;
+  background-size: cover;
+  /* min-width: 315px;
+  min-height: 315px; */
+}
+
+.image__sunset {
+  background-image: url(/images/sunset.png);
+  grid-area: sunset;
+  grid-column: 1;
+  grid-column-end: 3;
+}
+
+.image__ice {
+  background-image: url(/images/ice-cream.png);
+  grid-area: ice;
+  grid-column: 3;
+  grid-column-end: 4;
+  grid-row: 1;
+  grid-row-end: 3;
+}
+
+.image__tape {
+  background-image: url(/images/tape.png);
+  grid-area: tape;
+  grid-column: 1;
+  grid-column-end: 2;
+  grid-row: 2;
+  grid-row-end: 4;
+}
+
+.image__books {
+  background-image: url(/images/books.png);
+  grid-area: books;
+  grid-column: 2;
+  grid-column-end: 3;
+  grid-row: 2;
+  grid-row-end: 3;
+}
+
+.image__street {
+  background-image: url(/images/street.png);
+  grid-area: street;
+  grid-column: 2;
+  grid-column-end: 4;
+  grid-row: 3;
+  grid-row-end: 4;
+}
+
+.footer__focus {
+  min-height: 768px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 120px;
+  text-shadow: 2px 2px 0px #FF0070;
+  color: var(--focus-color);
+}
+
+.footer__focus .rec .rec__icon {
+  background: none;
+  box-shadow: none;
+}
+
+.footer__focus h3 {
+  font-size: 157px;
+  margin: 0;
 }
