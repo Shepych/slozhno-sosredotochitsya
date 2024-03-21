@@ -10,7 +10,10 @@
   --focus-color: #DB00FF;
   --main-text-color: #F1B2CE;
   --additional-text-color: #FF0070;
-  --header-background-image: url('/images/cover-image-dark.png')
+  --header-background-image: url('/images/cover-image-dark.png');
+  --rec-display: visible;
+  --point-shadow: 0 0 6px 3px var(--additional-text-color);
+  --point-background: var(--additional-text-color);
 }
 
 .page.theme_dark {
