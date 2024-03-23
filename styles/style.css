@@ -1,7 +1,5 @@
-@import url(../fonts/fonts.css);
-
 * {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
@@ -14,20 +12,19 @@
 }
 
 .header__no-focus {
-  font-family: 'IBM Plex Mono';
-  position: absolute;
-  left: 0;
   margin: 0;
-  top: calc(50% - 102px);
-  font-size: 157px;
+  font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
+  font-size: clamp(116px, 50%, 157px);
   text-shadow: 4px 4px 0px #FF0070;
   color: var(--focus-color);
 }
 
 .header {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
   position: relative;
-  height: 1024px;
-  max-height: 768px;
+  height: 100vh;
+  min-height: 668px;
   background-size:cover;
   background-position: 50% 50%;
   background-image: var(--header-background-image);
@@ -66,7 +63,7 @@
 
 .header__slogan {
   color: #000028;
-  font-family: "IBM Plex Mono";
+  font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -75,9 +72,6 @@
   display: flex;
   flex-direction: column;
   line-height: 23.4px;
-  position: absolute;
-  bottom: 134px;
-  right: 20px;
 }
 
 .rec {
@@ -90,7 +84,7 @@
 }
 
 .rec__text {
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: var(--additional-text-color);
   visibility: var(--rec-display);
@@ -330,7 +324,6 @@
 
   .header__no-focus {
     font-size: 120px;
-    top: calc(50% - 77px);
   }
 
   .header__theme-menu {

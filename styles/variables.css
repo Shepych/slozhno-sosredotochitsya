@@ -12,3 +12,15 @@
   --additional-text-color: #FF0070;
   --header-background-image: url('/images/cover-image.png')
 } 
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --header-background-image: url('/images/cover-image.png')
+  }
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-background-image: url('/images/cover-image-dark.png')
+  }
+}
