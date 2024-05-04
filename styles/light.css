@@ -11,7 +11,8 @@
   --main-text-color: #353430;
   --table-header-color: #353430;
   --additional-text-color: #353430;
-  --header-background-image: url('/images/cover-image-light.png');
+  --rec-text-color: #ffeff7;
+  --header-background-image: url('../images/cover-image-light.png');
   --rec-display: hidden;
   --point-shadow: none;
   --point-background: none;
@@ -28,7 +29,8 @@
       --focus-color: #FFC2E6;
       --main-text-color: #353430;
       --additional-text-color: #353430;
-      --header-background-image: url('/images/cover-image-light.png');
+      --rec-text-color: #ffeff7;
+      --header-background-image: url('../images/cover-image-light.png');
       --rec-display: hidden;
       --point-shadow: none;
       --point-background: none;
