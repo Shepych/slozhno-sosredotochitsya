@@ -4,7 +4,7 @@
 */
 
 :root {
-  /* Переменные тёмной темы */
+  /* Переменные светлой автоматической темы */
   --main-color: #000028;
   --additional-color: #FF0070;
   --focus-color: #DB00FF;
@@ -13,6 +13,9 @@
   --header-background-image: url('../images/cover-image.png');
   --point-shadow: 0 0 6px 3px var(--additional-text-color);
   --point-background: var(--additional-text-color);
+  --button-hover: rgba(50, 49, 45, 0.4);
+  --link-shadow:#F1B2CE;
+  --link-hover: 1px solid rgba(50, 49, 45);
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -24,6 +27,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --header-background-image: url('/images/cover-image-dark.png');
-    --rec-text-color: #FF0070;
+    --rec-text-color: var(--additional-text-color);
+    --link-shadow:var(--additional-text-color);
+    --button-hover: rgba(255, 0, 112, 0.4);
+    --link-hover: 1px solid var(--main-text-color);
   }
 }

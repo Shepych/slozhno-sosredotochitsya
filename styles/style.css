@@ -66,13 +66,36 @@
   display: flex;
   padding: 0px 13px 0px 13px;
   background: none;
-  border: 1px transparent;
+  border: 1px solid transparent;
   height: 26px;
   width: 70px;
 }
 
 .header__theme-menu-button:disabled  {
-  border: 1px solid var(--additional-text-color);;
+  border: 1px solid var(--additional-text-color);
+}
+
+.header__theme-menu-button:hover {
+  cursor: pointer;
+  border: 1px solid var(--button-hover);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--additional-text-color);
+}
+
+.link__in-text {
+  text-shadow: 1px 1px 0px var(--link-shadow);
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.link__in-text:hover {
+  border-bottom: var(--link-hover);
+}
+
+.link__in-text:focus {
+  border: var(--link-hover);
 }
 
 .header__slogan {

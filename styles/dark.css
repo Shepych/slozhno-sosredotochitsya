@@ -16,6 +16,9 @@
   --rec-display: visible;
   --point-shadow: 0 0 6px 3px var(--additional-text-color);
   --point-background: var(--additional-text-color);
+  --button-hover: rgba(255, 0, 112, 0.4);
+  --link-shadow: var(--additional-text-color);
+  --link-hover: 1px solid var(--main-text-color);
 }
 
 .page.theme_dark {
