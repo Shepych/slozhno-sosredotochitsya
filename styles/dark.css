@@ -28,3 +28,14 @@
   */
   background-color: var(--main-color);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-background-image: url('../images/cover-image-dark.png');
+    --rec-text-color: var(--additional-text-color);
+    --link-shadow:var(--additional-text-color);
+    --table-header-color: #000028;
+    --button-hover: rgba(255, 0, 112, 0.4);
+    --link-hover: 1px solid var(--main-text-color);
+  }
+}

@@ -14,7 +14,7 @@
   --point-shadow: 0 0 6px 3px var(--additional-text-color);
   --point-background: var(--additional-text-color);
   --button-hover: rgba(50, 49, 45, 0.4);
-  --link-shadow:#F1B2CE;
+  --link-shadow:#ff8dcb;
   --link-hover: 1px solid rgba(50, 49, 45);
 }
 
@@ -24,12 +24,3 @@
   }
 } */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --header-background-image: url('/images/cover-image-dark.png');
-    --rec-text-color: var(--additional-text-color);
-    --link-shadow:var(--additional-text-color);
-    --button-hover: rgba(255, 0, 112, 0.4);
-    --link-hover: 1px solid var(--main-text-color);
-  }
-}
